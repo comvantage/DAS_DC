@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://domainconfiguration.comvantage.eu/" elementFormDefault="unqualified" targetNamespace="http://domainconfiguration.comvantage.eu/" version="1.0">
+<xs:element name="addDomainSource" type="tns:addDomainSource"/>
+<xs:element name="addDomainSourceResponse" type="tns:addDomainSourceResponse"/>
+<xs:element name="addDomainSystemParameter" type="tns:addDomainSystemParameter"/>
+<xs:element name="addDomainSystemParameterResponse" type="tns:addDomainSystemParameterResponse"/>
+<xs:element name="clearDomainConfiguration" type="tns:clearDomainConfiguration"/>
+<xs:element name="clearDomainConfigurationResponse" type="tns:clearDomainConfigurationResponse"/>
+<xs:element name="deleteDomainSource" type="tns:deleteDomainSource"/>
+<xs:element name="deleteDomainSourceResponse" type="tns:deleteDomainSourceResponse"/>
+<xs:element name="deleteDomainSystemParameter" type="tns:deleteDomainSystemParameter"/>
+<xs:element name="deleteDomainSystemParameterResponse" type="tns:deleteDomainSystemParameterResponse"/>
+<xs:element name="getAllDomainRoles" type="tns:getAllDomainRoles"/>
+<xs:element name="getAllDomainRolesResponse" type="tns:getAllDomainRolesResponse"/>
+<xs:element name="getAllDomainSPARULTemplates" type="tns:getAllDomainSPARULTemplates"/>
+<xs:element name="getAllDomainSPARULTemplatesResponse" type="tns:getAllDomainSPARULTemplatesResponse"/>
+<xs:element name="getAllDomainSources" type="tns:getAllDomainSources"/>
+<xs:element name="getAllDomainSourcesResponse" type="tns:getAllDomainSourcesResponse"/>
+<xs:element name="getAllDomainSystemParameters" type="tns:getAllDomainSystemParameters"/>
+<xs:element name="getAllDomainSystemParametersResponse" type="tns:getAllDomainSystemParametersResponse"/>
+<xs:element name="getAllDomainViewActions" type="tns:getAllDomainViewActions"/>
+<xs:element name="getAllDomainViewActionsResponse" type="tns:getAllDomainViewActionsResponse"/>
+<xs:element name="getDomainSPARULTemplateById" type="tns:getDomainSPARULTemplateById"/>
+<xs:element name="getDomainSPARULTemplateByIdResponse" type="tns:getDomainSPARULTemplateByIdResponse"/>
+<xs:element name="getDomainSourcesByContent" type="tns:getDomainSourcesByContent"/>
+<xs:element name="getDomainSourcesByContentResponse" type="tns:getDomainSourcesByContentResponse"/>
+<xs:element name="getDomainSourcesById" type="tns:getDomainSourcesById"/>
+<xs:element name="getDomainSourcesByIdResponse" type="tns:getDomainSourcesByIdResponse"/>
+<xs:element name="getDomainSourcesByName" type="tns:getDomainSourcesByName"/>
+<xs:element name="getDomainSourcesByNameResponse" type="tns:getDomainSourcesByNameResponse"/>
+<xs:element name="getDomainSourcesByType" type="tns:getDomainSourcesByType"/>
+<xs:element name="getDomainSourcesByTypeResponse" type="tns:getDomainSourcesByTypeResponse"/>
+<xs:element name="getDomainSystemParametersByKey" type="tns:getDomainSystemParametersByKey"/>
+<xs:element name="getDomainSystemParametersByKeyResponse" type="tns:getDomainSystemParametersByKeyResponse"/>
+<xs:element name="getVersion" type="tns:getVersion"/>
+<xs:element name="getVersionResponse" type="tns:getVersionResponse"/>
+<xs:element name="hasUseRightsForSPARULTemplate" type="tns:hasUseRightsForSPARULTemplate"/>
+<xs:element name="hasUseRightsForSPARULTemplateResponse" type="tns:hasUseRightsForSPARULTemplateResponse"/>
+<xs:element name="wstestComplex" type="tns:wstestComplex"/>
+<xs:element name="wstestComplexResponse" type="tns:wstestComplexResponse"/>
+<xs:element name="wstestSingle" type="tns:wstestSingle"/>
+<xs:element name="wstestSingleResponse" type="tns:wstestSingleResponse"/>
+<xs:element name="wstestSuperComplex" type="tns:wstestSuperComplex"/>
+<xs:element name="wstestSuperComplexResponse" type="tns:wstestSuperComplexResponse"/>
+<xs:complexType name="getAllDomainSources">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="getAllDomainSourcesResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:domainSourceDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="domainSourceDetail">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="content" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="id" type="xs:long"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="password" type="xs:string"/>
+      <xs:element minOccurs="0" name="queryEndpointURL" type="xs:string"/>
+      <xs:element minOccurs="0" name="type" type="xs:string"/>
+      <xs:element minOccurs="0" name="updateEndpointURL" type="xs:string"/>
+      <xs:element minOccurs="0" name="username" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="arrayList">
+    <xs:complexContent>
+      <xs:extension base="tns:abstractList">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType abstract="true" name="abstractList">
+    <xs:complexContent>
+      <xs:extension base="tns:abstractCollection">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType abstract="true" name="abstractCollection">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="getDomainSourcesByType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="type" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getDomainSourcesByTypeResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:domainSourceDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getAllDomainSPARULTemplates">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="getAllDomainSPARULTemplatesResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:domainSPARULTemplate"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="domainSPARULTemplate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="client" type="xs:long"/>
+      <xs:element name="enabled" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="id" type="xs:long"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="roles" nillable="true" type="tns:domainRole"/>
+      <xs:element minOccurs="0" name="source" type="xs:string"/>
+      <xs:element minOccurs="0" name="statement" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="viewactions" nillable="true" type="tns:domainViewAction"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="domainRole">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="client" type="xs:long"/>
+      <xs:element minOccurs="0" name="id" type="xs:long"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="domainViewAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="client" type="xs:long"/>
+      <xs:element minOccurs="0" name="id" type="xs:long"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="statement" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getDomainSPARULTemplateById">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="templateId" type="xs:long"/>
+      <xs:element minOccurs="0" name="clientId" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getDomainSPARULTemplateByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:domainSPARULTemplate"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="deleteDomainSystemParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="param" type="tns:domainSystemParameter"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="domainSystemParameter">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int"/>
+      <xs:element minOccurs="0" name="key" type="xs:string"/>
+      <xs:element minOccurs="0" name="value" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="deleteDomainSystemParameterResponse">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="wstestSingle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="testparam" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="wstestSingleResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getDomainSystemParametersByKey">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="key" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getDomainSystemParametersByKeyResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:domainSystemParameter"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getAllDomainRoles">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="getAllDomainRolesResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:domainRole"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getDomainSourcesById">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getDomainSourcesByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:domainSourceDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getAllDomainSystemParameters">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="getAllDomainSystemParametersResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:domainSystemParameter"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getVersion">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="getVersionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="clearDomainConfiguration">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="clearDomainConfigurationResponse">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="hasUseRightsForSPARULTemplate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="userRole" type="xs:string"/>
+      <xs:element minOccurs="0" name="templateId" type="xs:long"/>
+      <xs:element minOccurs="0" name="clientId" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="hasUseRightsForSPARULTemplateResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="addDomainSystemParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="param" type="tns:domainSystemParameter"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="addDomainSystemParameterResponse">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="wstestComplex">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="wstestComplexResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getAllDomainViewActions">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="getAllDomainViewActionsResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:domainViewAction"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="wstestSuperComplex">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="wstestSuperComplexResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:domainSourceDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="addDomainSource">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="source" type="tns:domainSourceDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="addDomainSourceResponse">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="getDomainSourcesByName">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getDomainSourcesByNameResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:domainSourceDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getDomainSourcesByContent">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="contents" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getDomainSourcesByContentResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:domainSourceDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="deleteDomainSource">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="source" type="tns:domainSourceDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="deleteDomainSourceResponse">
+    <xs:sequence/>
+  </xs:complexType>
+</xs:schema>

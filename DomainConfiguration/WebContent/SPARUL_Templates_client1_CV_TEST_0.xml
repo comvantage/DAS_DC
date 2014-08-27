@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- client id: WP6 = 1, WP7 = 2, WP8 = 3 -->
+<client id="1">
+	<actions>
+		<action id="1" name="VA_INS_01">
+			<statement>PREFIX ns: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX tee: &lt;http://www.comvantage.eu/ontologies/mma/tee/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX report: &lt;http://eu/comvantage/kua/dhm/kua001/testreport/&gt;
+PREFIX ac: &lt;http://www.comvantage.eu/ontologies/ac-schema/&gt;
+PREFIX acd: &lt;http://www.comvantage.eu/instances/&gt;
+
+INSERT {
+  GRAPH acd:cv_wp8_comau_employee_canSee {
+       report:id ns:type tee:Report . 
+       report:id tee:hasTemplate $(templateId,iri) .
+       report:id tee:ReportId $(reportId,literal) . 
+       report:id tee:hasDevice tee:deviceData1 .
+       tee:deviceData1 tee:hasUri $(device1,iri).
+       report:id tee:hasDevice tee:deviceData2 .
+       tee:deviceData2 tee:hasUri $(device2,iri).
+       report:id tee:hasDevice tee:deviceData3 .
+       tee:deviceData3 tee:hasUri $(device3,iri).
+}}</statement>
+		</action>
+	</actions>
+	<roles>
+		<role id="1" name="http://www.comvantage.eu/ontologies/ac-schema/cv_wp6_comau_employee"/>
+	</roles>
+	<templates>
+		<template id="1" name="Update machine specification" enabled="true" source="TUD_WP7_Virtuoso">
+			<statement>PREFIX ns: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX tee: &lt;http://www.comvantage.eu/ontologies/mma/tee/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX report: &lt;http://eu/comvantage/kua/dhm/kua001/testreport/&gt;
+PREFIX ac: &lt;http://www.comvantage.eu/ontologies/ac-schema/&gt;
+PREFIX acd: &lt;http://www.comvantage.eu/instances/&gt;
+
+INSERT INTO &lt;http://www.comvantage.eu/instances&gt; {
+       report:id ns:type tee:Report . 
+       report:id tee:hasTemplate $(templateId,iri) .
+       report:id tee:ReportId $(reportId,literal) . 
+       report:id tee:hasDevice tee:deviceData1 .
+       tee:deviceData1 tee:hasUri $(device1,iri).
+       report:id tee:hasDevice tee:deviceData2 .
+       tee:deviceData2 tee:hasUri $(device2,iri).
+       report:id tee:hasDevice tee:deviceData3 .
+       tee:deviceData3 tee:hasUri $(device3,iri).
+}</statement>
+			<assignedActions>
+				<value>1</value>
+			</assignedActions>
+			<assignedRoles>
+				<value>1</value>
+			</assignedRoles>
+		</template>
+	</templates>
+</client>

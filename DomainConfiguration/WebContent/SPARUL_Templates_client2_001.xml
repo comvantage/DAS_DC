@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<client id="2">
+	<actions>
+		<action id="1" name="ViewAction1">
+			<statement>Statement for ViewAction1</statement>
+		</action>
+		<action id="2" name="ViewAction2">
+			<statement>Statement for ViewAction2</statement>
+		</action>
+		<action id="3" name="ViewAction3">
+			<statement>Statement for ViewAction3</statement>
+		</action>
+	</actions>
+	<roles>
+		<role id="1" name="http://comvantage.eu/ontologies/ac-schema/cv_wp6_fiat_employee"/>
+		<role id="2" name="http://comvantage.eu/ontologies/ac-schema/cv_wp6_comau_employee"/>
+		<role id="3" name="http://comvantage.eu/ontologies/ac-schema/cv_operator"/>
+	</roles>
+	<templates>
+		<template id="1" name="Template1" enabled="true" source="Source_id">
+			<statement>Statement for Template1</statement>
+			<assignedActions>
+				<value>1</value>
+				<value>2</value>
+			</assignedActions>
+			<assignedRoles>
+				<value>1</value>
+				<value>3</value>
+			</assignedRoles>
+		</template>
+	</templates>
+</client>

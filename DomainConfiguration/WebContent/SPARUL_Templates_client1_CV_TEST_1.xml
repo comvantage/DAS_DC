@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- client id: WP6 = 1, WP7 = 2, WP8 = 3 -->
+<client id="1">
+	<actions>
+		<action id="1" name="VA_INS_01">
+			<statement>PREFIX pec: &lt;http://www.comvantage.eu/ontologies/pec/&gt; INSERT DATA INTO &lt;http://www.comvantage.eu/ontologies/pec/plants&gt; {pec:InsertAction50 pec:hasId "$(ticket,iri)"}</statement>
+		</action>
+		<action id="2" name="VA_INS_02">
+			<statement>PREFIX pec: &lt;http://www.comvantage.eu/ontologies/pec/&gt; INSERT DATA INTO &lt;http://www.comvantage.eu/ontologies/pec/plants&gt; {pec:InsertAction51 pec:hasId "$(ticket,iri)"}</statement>
+		</action>
+	</actions>
+	<roles>
+		<role id="1" name="http://comvantage.eu/ontologies/ac-schema/cv_wp6_fiat_employee"/>
+	</roles>
+	<templates>
+		<template id="1" name="Update machine specification" enabled="true" source="TUD_WP7_Virtuoso">
+			<statement>PREFIX pec: &lt;http://www.comvantage.eu/ontologies/pec/&gt; INSERT DATA INTO &lt;http://www.comvantage.eu/ontologies/pec/plants&gt; {pec:Statement50 pec:hasId "$(person,iri)"}</statement>
+			<assignedActions>
+				<value>1</value>
+				<value>2</value>
+			</assignedActions>
+			<assignedRoles>
+				<value>1</value>
+			</assignedRoles>
+		</template>
+	</templates>
+</client>

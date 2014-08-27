@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+org.eclipse.jpt.core.platform=eclipselink2_3
+org.eclipse.jpt.jpa.core.discoverAnnotatedClasses=false
+problem.PERSISTENT_TYPE_MAPPED_BUT_NOT_INCLUDED_IN_PERSISTENCE_UNIT=info
+workspace_preferences_overriden=true

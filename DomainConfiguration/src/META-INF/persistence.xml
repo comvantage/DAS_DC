@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="DomainConfiguration">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>eu.comvantage.domainconfiguration.data.DomainSourceDetail</class>
+		<class>eu.comvantage.domainconfiguration.data.DomainSystemParameter</class>
+		<class>eu.comvantage.domainconfiguration.data.DomainSPARULTemplate</class>
+		<class>eu.comvantage.domainconfiguration.data.DomainViewAction</class>
+		<class>eu.comvantage.domainconfiguration.data.DomainRole</class>
+		
+		<properties>
+      		<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver" />
+      		<property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/domainsourceDB;create=true" />
+      		<property name="javax.persistence.jdbc.user" value="test" />
+      		<property name="javax.persistence.jdbc.password" value="test" />
+
+      		<!-- EclipseLink should create the database schema automatically -->
+      		<property name="eclipselink.ddl-generation" value="create-tables" />
+      		<property name="eclipselink.ddl-generation.output-mode" value="database" />
+    	</properties>
+	</persistence-unit>
+</persistence>

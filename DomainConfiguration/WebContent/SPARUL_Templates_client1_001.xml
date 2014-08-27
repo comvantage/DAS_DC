@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- client id: WP6 = 1, WP7 = 2, WP8 = 3 -->
+<client id="1">
+	<actions>
+		<action id="1" name="VA_INS_01">
+			<statement>INSERT DATA {?s ?p ?o}</statement>
+		</action>
+		<action id="2" name="VA_INS_02">
+			<statement>INSERT DATA {?s ?p ?o}</statement>
+		</action>
+		<action id="3" name="VA_DEL_03">
+			<statement>DELETE DATA {?s ?p ?o}</statement>
+		</action>
+		<action id="4" name="VA_DEL_04">
+			<statement>DELETE DATA {?s ?p ?o}</statement>
+		</action>
+		<action id="5" name="VA_INS_05">
+			<statement>INSERT DATA {?s ?p ?o}</statement>
+		</action>
+		<action id="6" name="VA_DEL_06">
+			<statement>DELETE DATA {?s ?p ?o}</statement>
+		</action>
+	</actions>
+	<roles>
+		<role id="1" name="http://comvantage.eu/ontologies/ac-schema/cv_operator"/>
+		<role id="2" name="http://comvantage.eu/ontologies/ac-schema/cv_customer"/>
+		<role id="3" name="http://comvantage.eu/ontologies/ac-schema/cv_technician"/>
+		<role id="4" name="http://comvantage.eu/ontologies/ac-schema/cv_mmco"/>
+		<role id="5" name="http://comvantage.eu/ontologies/ac-schema/cv_svtn"/>
+		<role id="6" name="http://comvantage.eu/ontologies/ac-schema/cv_manager"/>
+		<role id="7" name="http://comvantage.eu/ontologies/ac-schema/cv_accessallareas"/>
+	</roles>
+	<templates>
+		<template id="1" name="Update machine specification" enabled="true" source="TUD_WP7_Virtuoso">
+			<statement>INSERT DATA {?s ?p ?o}</statement>
+			<assignedActions>
+				<value>2</value>
+				<value>3</value>
+				<value>4</value>
+			</assignedActions>
+			<assignedRoles>
+				<value>1</value>
+				<value>3</value>
+			</assignedRoles>
+		</template>
+		<template id="2" name="Update customer details" enabled="false" source="TUD_WP7_Virtuoso">
+			<statement>INSERT DATA {?s ?p ?o}</statement>
+			<assignedActions>
+				<value>4</value>
+				<value>6</value>
+			</assignedActions>
+			<assignedRoles>
+				<value>2</value>
+				<value>7</value>
+			</assignedRoles>
+		</template>
+	</templates>
+</client>

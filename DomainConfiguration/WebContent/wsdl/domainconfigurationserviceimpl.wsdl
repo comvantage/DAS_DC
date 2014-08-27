@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="DomainConfigurationServiceImplService" targetNamespace="http://domainconfiguration.comvantage.eu/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://domainconfiguration.comvantage.eu/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+<import namespace="http://domainconfiguration.comvantage.eu/" schemaLocation="domainconfigurationserviceimpl_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="getDomainSourcesByName">
+    <wsdl:part name="parameters" element="tns:getDomainSourcesByName">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDomainSourcesByType">
+    <wsdl:part name="parameters" element="tns:getDomainSourcesByType">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDomainSourcesByNameResponse">
+    <wsdl:part name="parameters" element="tns:getDomainSourcesByNameResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteDomainSystemParameter">
+    <wsdl:part name="parameters" element="tns:deleteDomainSystemParameter">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAllDomainSPARULTemplatesResponse">
+    <wsdl:part name="parameters" element="tns:getAllDomainSPARULTemplatesResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDomainSPARULTemplateByIdResponse">
+    <wsdl:part name="parameters" element="tns:getDomainSPARULTemplateByIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="wstestSingleResponse">
+    <wsdl:part name="parameters" element="tns:wstestSingleResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAllDomainSources">
+    <wsdl:part name="parameters" element="tns:getAllDomainSources">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAllDomainViewActions">
+    <wsdl:part name="parameters" element="tns:getAllDomainViewActions">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addDomainSystemParameterResponse">
+    <wsdl:part name="parameters" element="tns:addDomainSystemParameterResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="hasUseRightsForSPARULTemplateResponse">
+    <wsdl:part name="parameters" element="tns:hasUseRightsForSPARULTemplateResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDomainSystemParametersByKeyResponse">
+    <wsdl:part name="parameters" element="tns:getDomainSystemParametersByKeyResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDomainSourcesByIdResponse">
+    <wsdl:part name="parameters" element="tns:getDomainSourcesByIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteDomainSource">
+    <wsdl:part name="parameters" element="tns:deleteDomainSource">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="wstestSingle">
+    <wsdl:part name="parameters" element="tns:wstestSingle">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="clearDomainConfigurationResponse">
+    <wsdl:part name="parameters" element="tns:clearDomainConfigurationResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDomainSPARULTemplateById">
+    <wsdl:part name="parameters" element="tns:getDomainSPARULTemplateById">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDomainSourcesById">
+    <wsdl:part name="parameters" element="tns:getDomainSourcesById">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAllDomainSourcesResponse">
+    <wsdl:part name="parameters" element="tns:getAllDomainSourcesResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="clearDomainConfiguration">
+    <wsdl:part name="parameters" element="tns:clearDomainConfiguration">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addDomainSource">
+    <wsdl:part name="parameters" element="tns:addDomainSource">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDomainSourcesByTypeResponse">
+    <wsdl:part name="parameters" element="tns:getDomainSourcesByTypeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDomainSourcesByContent">
+    <wsdl:part name="parameters" element="tns:getDomainSourcesByContent">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAllDomainRoles">
+    <wsdl:part name="parameters" element="tns:getAllDomainRoles">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addDomainSystemParameter">
+    <wsdl:part name="parameters" element="tns:addDomainSystemParameter">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAllDomainViewActionsResponse">
+    <wsdl:part name="parameters" element="tns:getAllDomainViewActionsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAllDomainSystemParameters">
+    <wsdl:part name="parameters" element="tns:getAllDomainSystemParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDomainSourcesByContentResponse">
+    <wsdl:part name="parameters" element="tns:getDomainSourcesByContentResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="wstestComplex">
+    <wsdl:part name="parameters" element="tns:wstestComplex">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteDomainSystemParameterResponse">
+    <wsdl:part name="parameters" element="tns:deleteDomainSystemParameterResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="wstestSuperComplexResponse">
+    <wsdl:part name="parameters" element="tns:wstestSuperComplexResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getVersion">
+    <wsdl:part name="parameters" element="tns:getVersion">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="wstestSuperComplex">
+    <wsdl:part name="parameters" element="tns:wstestSuperComplex">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteDomainSourceResponse">
+    <wsdl:part name="parameters" element="tns:deleteDomainSourceResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="wstestComplexResponse">
+    <wsdl:part name="parameters" element="tns:wstestComplexResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAllDomainSystemParametersResponse">
+    <wsdl:part name="parameters" element="tns:getAllDomainSystemParametersResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAllDomainSPARULTemplates">
+    <wsdl:part name="parameters" element="tns:getAllDomainSPARULTemplates">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getVersionResponse">
+    <wsdl:part name="parameters" element="tns:getVersionResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addDomainSourceResponse">
+    <wsdl:part name="parameters" element="tns:addDomainSourceResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAllDomainRolesResponse">
+    <wsdl:part name="parameters" element="tns:getAllDomainRolesResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDomainSystemParametersByKey">
+    <wsdl:part name="parameters" element="tns:getDomainSystemParametersByKey">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="hasUseRightsForSPARULTemplate">
+    <wsdl:part name="parameters" element="tns:hasUseRightsForSPARULTemplate">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="DomainConfigurationServiceImpl">
+    <wsdl:operation name="getAllDomainSources">
+      <wsdl:input name="getAllDomainSources" message="tns:getAllDomainSources">
+    </wsdl:input>
+      <wsdl:output name="getAllDomainSourcesResponse" message="tns:getAllDomainSourcesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDomainSourcesByType">
+      <wsdl:input name="getDomainSourcesByType" message="tns:getDomainSourcesByType">
+    </wsdl:input>
+      <wsdl:output name="getDomainSourcesByTypeResponse" message="tns:getDomainSourcesByTypeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllDomainSPARULTemplates">
+      <wsdl:input name="getAllDomainSPARULTemplates" message="tns:getAllDomainSPARULTemplates">
+    </wsdl:input>
+      <wsdl:output name="getAllDomainSPARULTemplatesResponse" message="tns:getAllDomainSPARULTemplatesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDomainSPARULTemplateById">
+      <wsdl:input name="getDomainSPARULTemplateById" message="tns:getDomainSPARULTemplateById">
+    </wsdl:input>
+      <wsdl:output name="getDomainSPARULTemplateByIdResponse" message="tns:getDomainSPARULTemplateByIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteDomainSystemParameter">
+      <wsdl:input name="deleteDomainSystemParameter" message="tns:deleteDomainSystemParameter">
+    </wsdl:input>
+      <wsdl:output name="deleteDomainSystemParameterResponse" message="tns:deleteDomainSystemParameterResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wstestSingle">
+      <wsdl:input name="wstestSingle" message="tns:wstestSingle">
+    </wsdl:input>
+      <wsdl:output name="wstestSingleResponse" message="tns:wstestSingleResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDomainSystemParametersByKey">
+      <wsdl:input name="getDomainSystemParametersByKey" message="tns:getDomainSystemParametersByKey">
+    </wsdl:input>
+      <wsdl:output name="getDomainSystemParametersByKeyResponse" message="tns:getDomainSystemParametersByKeyResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllDomainRoles">
+      <wsdl:input name="getAllDomainRoles" message="tns:getAllDomainRoles">
+    </wsdl:input>
+      <wsdl:output name="getAllDomainRolesResponse" message="tns:getAllDomainRolesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDomainSourcesById">
+      <wsdl:input name="getDomainSourcesById" message="tns:getDomainSourcesById">
+    </wsdl:input>
+      <wsdl:output name="getDomainSourcesByIdResponse" message="tns:getDomainSourcesByIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllDomainSystemParameters">
+      <wsdl:input name="getAllDomainSystemParameters" message="tns:getAllDomainSystemParameters">
+    </wsdl:input>
+      <wsdl:output name="getAllDomainSystemParametersResponse" message="tns:getAllDomainSystemParametersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVersion">
+      <wsdl:input name="getVersion" message="tns:getVersion">
+    </wsdl:input>
+      <wsdl:output name="getVersionResponse" message="tns:getVersionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clearDomainConfiguration">
+      <wsdl:input name="clearDomainConfiguration" message="tns:clearDomainConfiguration">
+    </wsdl:input>
+      <wsdl:output name="clearDomainConfigurationResponse" message="tns:clearDomainConfigurationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hasUseRightsForSPARULTemplate">
+      <wsdl:input name="hasUseRightsForSPARULTemplate" message="tns:hasUseRightsForSPARULTemplate">
+    </wsdl:input>
+      <wsdl:output name="hasUseRightsForSPARULTemplateResponse" message="tns:hasUseRightsForSPARULTemplateResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addDomainSystemParameter">
+      <wsdl:input name="addDomainSystemParameter" message="tns:addDomainSystemParameter">
+    </wsdl:input>
+      <wsdl:output name="addDomainSystemParameterResponse" message="tns:addDomainSystemParameterResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wstestComplex">
+      <wsdl:input name="wstestComplex" message="tns:wstestComplex">
+    </wsdl:input>
+      <wsdl:output name="wstestComplexResponse" message="tns:wstestComplexResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllDomainViewActions">
+      <wsdl:input name="getAllDomainViewActions" message="tns:getAllDomainViewActions">
+    </wsdl:input>
+      <wsdl:output name="getAllDomainViewActionsResponse" message="tns:getAllDomainViewActionsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wstestSuperComplex">
+      <wsdl:input name="wstestSuperComplex" message="tns:wstestSuperComplex">
+    </wsdl:input>
+      <wsdl:output name="wstestSuperComplexResponse" message="tns:wstestSuperComplexResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addDomainSource">
+      <wsdl:input name="addDomainSource" message="tns:addDomainSource">
+    </wsdl:input>
+      <wsdl:output name="addDomainSourceResponse" message="tns:addDomainSourceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDomainSourcesByName">
+      <wsdl:input name="getDomainSourcesByName" message="tns:getDomainSourcesByName">
+    </wsdl:input>
+      <wsdl:output name="getDomainSourcesByNameResponse" message="tns:getDomainSourcesByNameResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDomainSourcesByContent">
+      <wsdl:input name="getDomainSourcesByContent" message="tns:getDomainSourcesByContent">
+    </wsdl:input>
+      <wsdl:output name="getDomainSourcesByContentResponse" message="tns:getDomainSourcesByContentResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteDomainSource">
+      <wsdl:input name="deleteDomainSource" message="tns:deleteDomainSource">
+    </wsdl:input>
+      <wsdl:output name="deleteDomainSourceResponse" message="tns:deleteDomainSourceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DomainConfigurationServiceImplServiceSoapBinding" type="tns:DomainConfigurationServiceImpl">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getAllDomainSources">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAllDomainSources">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAllDomainSourcesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDomainSourcesByType">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDomainSourcesByType">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDomainSourcesByTypeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllDomainSPARULTemplates">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAllDomainSPARULTemplates">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAllDomainSPARULTemplatesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDomainSPARULTemplateById">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDomainSPARULTemplateById">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDomainSPARULTemplateByIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteDomainSystemParameter">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="deleteDomainSystemParameter">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="deleteDomainSystemParameterResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wstestSingle">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="wstestSingle">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="wstestSingleResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllDomainRoles">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAllDomainRoles">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAllDomainRolesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDomainSystemParametersByKey">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDomainSystemParametersByKey">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDomainSystemParametersByKeyResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllDomainSystemParameters">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAllDomainSystemParameters">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAllDomainSystemParametersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDomainSourcesById">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDomainSourcesById">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDomainSourcesByIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clearDomainConfiguration">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="clearDomainConfiguration">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="clearDomainConfigurationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVersion">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getVersion">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getVersionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hasUseRightsForSPARULTemplate">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="hasUseRightsForSPARULTemplate">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hasUseRightsForSPARULTemplateResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wstestComplex">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="wstestComplex">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="wstestComplexResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addDomainSystemParameter">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="addDomainSystemParameter">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addDomainSystemParameterResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllDomainViewActions">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAllDomainViewActions">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAllDomainViewActionsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wstestSuperComplex">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="wstestSuperComplex">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="wstestSuperComplexResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addDomainSource">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="addDomainSource">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addDomainSourceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDomainSourcesByName">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDomainSourcesByName">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDomainSourcesByNameResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDomainSourcesByContent">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDomainSourcesByContent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDomainSourcesByContentResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteDomainSource">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="deleteDomainSource">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="deleteDomainSourceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DomainConfigurationServiceImplService">
+    <wsdl:port name="DomainConfigurationServiceImplPort" binding="tns:DomainConfigurationServiceImplServiceSoapBinding">
+      <soap:address location="http://localhost:9090/DomainConfigurationServiceImplPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
